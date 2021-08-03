@@ -139,7 +139,7 @@ MoveY(int amount);
 #### Cloning
 You can clone any Object with the Clone() Command. This will return an exact copy of the first object, but not linked to it.
 ```csharp
-Clone()
+Clone();
 ```
 
 
@@ -149,9 +149,38 @@ You can access the Player SubObject like this:
 ```csharp
 Test.Player
 ```
+The Player Object has the following things:
+an Active Sprite, an Active Animation Sprite, a Sprite Library, its Parent Object, Its Rotation and scale, a bool saying if the sprite is animated, the current animation sprite library, an animation library, the frame the animation is on and the animation speed.
+
+
+You can Turn the Player Object by either changing its rotation or by using the TurnTo command.
+```csharp
+Test.Player.Rotation = 90; // Sets the rotation to 90°
+Test.Player.TurnTo(Object obj); // Turns to an Object
+Test.Player.TurnTo((int x, int y) pos); // Turns to some location
+```
+
+You can also change its scale:
+```csharp
+Test.Player.Scale = 2; // Makes the Object twice the original size.
+```
+
+If you change the scale or rotation by changing the variables you will have to update its Sprite:
+```csharp
+Test.Player.UpdateSprite();
+```
+
+You can change its Animation by changing the Current animation library and changing the IsSpriteAnimated to true.
+
+And you can interact with the other libaries in it and also dont need to initialise them.
+
+You can also just clone the Player Object:
+```csharp
+Object.Player clone = Test.Player.Clone();
+```
 
 #### Text Object
-test
+The Text Object is for Displaying Text.
 
 #### Scene Object
 test
