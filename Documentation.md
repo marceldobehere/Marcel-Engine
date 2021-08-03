@@ -69,6 +69,12 @@ It takes a number as an input and tries to draw at that framerate. If you use -1
 RenderFrame(double prefferedFps);
 ```
 
+You can also change the backround colour with the SetNewBackroundColour() Method. Its takes an int between 0 and 15 as input.
+
+```csharp
+SetNewBackroundColour(int colour);
+```
+
 #### Collision
 You can check the collision between two objects by using the CheckObjectCollision() Method. It takes two Objects as input and returns true, if they are colliding.
 ```csharp
@@ -76,7 +82,13 @@ CheckObjectCollision(Object a, Object b);
 ```
 
 #### Main Scene
-test
+The engine has an active scene by default.
+
+You can change it with the ChangeActiveScene() command. It takes a scene object as input and replaces the active scene with that one.
+```csharp
+ChangeActiveScene(Scene new_scene)
+```
+
 
 #### Camera
 test
