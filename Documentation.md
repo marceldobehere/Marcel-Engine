@@ -55,7 +55,12 @@ Here are the main parts of the engine
 This is the main part of the engine.
 
 #### Initialisation
-test
+You can initialise the engine in two ways:
+```csharp
+MainEngine engine = new MainEngine((SIZE_X, SIZE_Y, FONT_SIZE), SHOULD_WINDOW_MAXIMISE);
+//OR
+MainEngine engine = new MainEngine((SIZE_X, SIZE_Y, FONT_SIZE), SHOULD_WINDOW_MAXIMISE, FONT_NAME);
+```
 
 #### Rendering
 test
