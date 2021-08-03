@@ -257,6 +257,30 @@ lib.Sprites.Add("Test", test); // the Sprites List is actually a Dictionary!
 ### Sound
 Sound manager for the engine.
 
+Sounds are pretty simple to use.
+
+You initialise a Sound Object with a Filename:
+```csharp
+Sound Testsound = new Sound("test.mp3");
+```
+Supported Filetypes I think: http://support.microsoft.com/kb/316992
+
+Then you can either Play the sound (or add it to a queue if a sound is playing)
+```csharp
+Testsound.Play(bool _loop); // you can decide if the sound should loop
+```
+or stop all playing things:
+```csharp
+Testsound.Stop();
+```
+or stop all playing things and use a new file:
+```csharp
+Testsound.New_File("test2.mp3");
+```
+And you can also change its Volume:
+```csharp
+Testsound.Volume = 95; // 95%
+```
 
 ### Networking
 Networking core for the engine.
