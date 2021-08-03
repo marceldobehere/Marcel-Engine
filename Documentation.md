@@ -111,8 +111,24 @@ There's still outdated Input with the GetKey() and GetKeyChar() Method
 ### Objects
 This is the Object class. All of the objects in the whole engine and your game will use it.
 
+Each Object has a Player and a Text Object, an Active Position type, a layer its on, a boolean showing if its shown, a Position, an Offset Position.
+
 #### Creating a new Object
-test
+you can make a new Object with the standard constructor.
+```csharp
+Object Test = new Object();
+```
+You will then need to set its active object type.
+```csharp
+Test.ActiveObjectType = 1;
+// 0 for none
+// 1 for Player
+// 2 for Text
+```
+Each object also has an Update Method which updates its Position and other stuff to the screen.
+```csharp
+Test.Update();
+```
 
 #### Player Object
 test
