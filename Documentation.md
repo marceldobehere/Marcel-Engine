@@ -144,7 +144,7 @@ Clone();
 
 
 #### Player Object
-The Player SubObject doesnt need any initialisation.
+The Player SubObject doesnt need any initialisation. Its ActiveObjectTypeNumber is 1.
 You can access the Player SubObject like this:
 ```csharp
 Test.Player
@@ -169,6 +169,7 @@ If you change the scale or rotation by changing the variables you will have to u
 ```csharp
 Test.Player.UpdateSprite();
 ```
+And of course you also have to update the Object.
 
 You can change its Animation by changing the Current animation library and changing the IsSpriteAnimated to true.
 
@@ -180,7 +181,27 @@ Object.Player clone = Test.Player.Clone();
 ```
 
 #### Text Object
-The Text Object is for Displaying Text.
+The Text Object is for Displaying Text. Its ActiveObjectTypeNumber is 2.
+
+It has a Parent Object, the actual Text, the Text colour, the charpixeldata (don't worry about that) and a bool saying if the text has a transparent backround.
+The Text Object also doesn't need any initialisation.
+
+You can update its text by changing the Text variable:
+```csharp
+Object.Text.Text = "Hello, World!";
+```
+
+You will need to update the Text if you change the text:
+```csharp
+Object.Text.UpdateText();
+```
+And of course you also have to update the Object.
+
+You can also clone the Text Object:
+```csharp
+Object.Text clone = Test.Text.Clone();
+```
+
 
 #### Scene Object
 test
