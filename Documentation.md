@@ -323,14 +323,64 @@ testnetwork.Client_.Received = "";
 ToSend is what the client will send and received is what it got as a reply from the Server.
 
 ### Screen
-Internal stuff ya dont need to care about
+Internal stuff you dont need to care about.
 
 
 ### Internals
 Internal stuff of the engine.
 
 #### Debug Logger
-test
+You can set up a Debug Logger. It will open up a second window and log stuff on it there.
+```csharp
+Internals.Debug_Logger logger = new Internals.Debug_Logger();
+```
+You can log any String like this:
+```csharp
+logger.Log("This is a test");
+```
+You can also change its title with the Set_title Method:
+```csharp
+logger.Set_title("Test Title!");
+```
+
 
 #### Boot
-test
+You can enable fastboot manually in the engine. (It will basically skip the smal little splashscreen.)
+
+You will have to go to the MainEngine.cs File and locate the initialise() Method.
+There you have to add internal.FastBoot = true; after internal = new Internals();
+
+It should look like this before:
+```csharp
+            Console.CursorVisible = false;
+            Display = new Screen(size, maximize, console_font);
+            _frames = 0;
+            _lastTimeBeforeXFrames = DateTime.Now;
+            ActiveScene = new Scene("Main");
+            _internal = new Internals();
+            //internal_.fastboot = true; // Delete this and just add _internal.FastBoot = true; right here
+            if (!_internal.FastBoot)
+            {
+                AddObjectToScene(_internal.SplashscreenObject);
+                RenderFrame(0.5);
+                RemoveObjectFromScene(_internal.SplashscreenObject);
+                RenderFrame(1);
+            }
+```
+And now like this
+```csharp
+            Console.CursorVisible = false;
+            Display = new Screen(size, maximize, console_font);
+            _frames = 0;
+            _lastTimeBeforeXFrames = DateTime.Now;
+            ActiveScene = new Scene("Main");
+            _internal = new Internals();
+            _internal.FastBoot = true;
+            if (!_internal.FastBoot)
+            {
+                AddObjectToScene(_internal.SplashscreenObject);
+                RenderFrame(0.5);
+                RemoveObjectFromScene(_internal.SplashscreenObject);
+                RenderFrame(1);
+            }
+```
