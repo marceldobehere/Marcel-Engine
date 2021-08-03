@@ -23,7 +23,6 @@ This is the documentation for Marcel Engine.
     + [Server](#server)
     + [Client](#client)
   * [Screen](#screen)
-    + [A](#a)
   * [Internals](#internals)
     + [Debug Logger](#debug-logger)
     + [Boot](#boot)
@@ -115,8 +114,6 @@ test
 ### Screen
 Internal stuff ya dont need to care about
 
-#### A
-test
 
 
 ### Internals
