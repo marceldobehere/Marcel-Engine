@@ -65,14 +65,14 @@ MainEngine engine = new MainEngine((SIZE_X, SIZE_Y, FONT_SIZE), SHOULD_WINDOW_MA
 #### Rendering
 The engine renders a Frame with the RenderFrame() Method.
 It takes a number as an input and tries to draw at that framerate. If you use -1 as the input, it will draw as fast as it can.
-```
+```csharp
 RenderFrame(double prefferedFps);
 ```
 
 #### Collision
 You can check the collision between two objects by using the CheckObjectCollision() Method. It takes two Objects as input and returns true, if they are colliding.
-```
-CheckObjectCollision(Object a, Object b)
+```csharp
+CheckObjectCollision(Object a, Object b);
 ```
 
 #### Main Scene
