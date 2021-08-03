@@ -37,23 +37,77 @@ There the engine is set up already.
 Here are the main parts of the engine
 
 ### Main Engine
-#### LMAO
+This is the main part of the engine.
+
+#### Initialisation
 test
 
+#### Rendering
+test
+
+#### Collision
+test
+
+#### Main Scene
+test
+
+#### Camera
+test
+
+
 ### Objects
-a
+This is the Object class. All of the objects in the whole engine and your game will use it.
+
+#### Creating a new Object
+test
+
+#### Player Object
+test
+
+#### Text Object
+test
+
+#### Scene Object
+test
+
 
 ### Graphics
-a
 
-### Screen
-a
+The main graphics core.
+
+#### Sprite
+test
+
+#### SpriteLib
+test
+
 
 ### Sound
-a
+Sound manager for the engine.
+
 
 ### Networking
-a
+Networking core for the engine.
+
+#### Server
+test
+
+#### Client
+test
+
+
+### Screen
+Internal stuff ya dont need to care about
+
+#### A
+test
+
 
 ### Internals
-a
+Internal stuff of the engine.
+
+#### Debug Logger
+test
+
+#### Boot
+test
