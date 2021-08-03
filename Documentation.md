@@ -204,7 +204,14 @@ Object.Text clone = Test.Text.Clone();
 
 
 #### Scene Object
-test
+The scene is a sepperate object in its own class. It can be initialised with a name or without a name:
+```csharp
+Scene testscene = new Scene();
+SScene testscene = new Scene(string _name);
+```
+
+It has a List of Objects that you can add and remove Objects to/from.
+
 
 
 ### Graphics
