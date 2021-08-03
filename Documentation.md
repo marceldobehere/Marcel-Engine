@@ -207,11 +207,11 @@ Object.Text clone = Test.Text.Clone();
 The scene is a sepperate object in its own class. It can be initialised with a name or without a name:
 ```csharp
 Scene testscene = new Scene();
-SScene testscene = new Scene(string _name);
+Scene testscene = new Scene(string _name);
 ```
 
 It has a List of Objects that you can add and remove Objects to/from.
-
+You can switch The active Scenes with this Class.
 
 
 ### Graphics
@@ -219,10 +219,39 @@ It has a List of Objects that you can add and remove Objects to/from.
 The main graphics core.
 
 #### Sprite
-test
+A Sprite contains a few things: a boolean saying if it has an image, the image data, the source image data, its border, if its centered, its rotation and its scale.
+
+You can initialise a Sprite with nothing or a path with a filename. (they are relative to the exe and you should put sprites into the engine folder or another folder)
+
+```csharp
+Graphics.Sprite test = new Sprite();
+Graphics.Sprite test = new Sprite(string Filename, bool _centered);
+```
+
+You can also set an Image with the SetImage Method:
+```csharp
+SetImageFromFile(string filename, bool _centered);
+```
+And if you do any changes to a sprite, you should use the UpdateImage Method to update the image data!
+```csharp
+UpdateImage();
+```
+
+You can also clone a Sprite
+```csharp
+Graphics.Sprite testclone = test.Clone();
+```
+
 
 #### SpriteLib
-test
+This is a Library with Sprites.
+
+You need to initialise it without anything.
+
+```csharp
+Graphics.Sprite_Lib lib = new Graphics.Sprite_Lib(); // sets up a new Sprite Library.
+lib.Sprites.Add("Test", test); // the Sprites List is actually a Dictionary!
+```
 
 
 ### Sound
