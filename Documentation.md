@@ -284,17 +284,46 @@ Testsound.Volume = 95; // 95%
 
 ### Networking
 Networking core for the engine.
+You can setup Networking pretty easily:
+```csharp
+Networking testnetwork = new Networking();
+```
+then you can start either a client or a server (or both) with a given IP:
+```csharp
+testnetwork.Client_.Start("localhost");
+testnetwork.Server_.Start("localhost");
+```
 
 #### Server
-test
+When you start a server you will interact with the received and reply variable:
+```csharp
+while (true)
+{
+    if (testnetwork.Server_.Received != "")
+    {
+        /*Do stuff...*/
+        testnetwork.Server_.Reply = "Something";
+        testnetwork.Server_.Received = "";
+    }
+}
+```
+Receive is what the server received and reply is what it will reply with.
 
 #### Client
-test
-
+When you start a server you will interact with the tosend and received variable:
+```csharp
+testnetwork.Client_.ToSend = "TestMessage123";
+testnetwork.Client_.Received = "";
+while (testnetwork.Client_.Received == "")
+{
+}
+/*Do stuff... with the received variable*/
+testnetwork.Client_.Received = "";
+```
+ToSend is what the client will send and received is what it got as a reply from the Server.
 
 ### Screen
 Internal stuff ya dont need to care about
-
 
 
 ### Internals
