@@ -2,8 +2,9 @@
 This is the documentation for Marcel Engine.
 
 ### Table of Contents  
-* [Getting Started](#start)  
-* [The Engine](#engine)
+  * [Getting Started](#getting-started)
+  * [The Engine](#the-engine)
+
 
 
 
@@ -28,40 +29,4 @@ There the engine is set up already.
 
 ## The Engine
 
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
-lol
+oof
