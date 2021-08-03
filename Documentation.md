@@ -100,9 +100,9 @@ The engine also has a Camera. (It IS NOT connected to the local scene!!!)
 
 You can move it around with the following Methods:
 ```csharp
-MoveCameraPosition((int x, int y) position)
-MoveXCameraPosition(int x)
-MoveYCameraPosition(int y)
+MoveCameraPosition((int x, int y) position);
+MoveXCameraPosition(int x);
+MoveYCameraPosition(int y);
 ```
 #### Outdated Input
 There's still outdated Input with the GetKey() and GetKeyChar() Method
@@ -129,9 +129,26 @@ Each object also has an Update Method which updates its Position and other stuff
 ```csharp
 Test.Update();
 ```
+#### Movement
+You can move an Object with the following Methods:
+```csharp
+Move((int x, int y) pos);
+MoveX(int amount);
+MoveY(int amount);
+```
+#### Cloning
+You can clone any Object with the Clone() Command. This will return an exact copy of the first object, but not linked to it.
+```csharp
+Clone()
+```
+
 
 #### Player Object
-test
+The Player SubObject doesnt need any initialisation.
+You can access the Player SubObject like this:
+```csharp
+Test.Player
+```
 
 #### Text Object
 test
