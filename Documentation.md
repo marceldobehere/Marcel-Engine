@@ -84,14 +84,28 @@ CheckObjectCollision(Object a, Object b);
 #### Main Scene
 The engine has an active scene by default.
 
-You can change it with the ChangeActiveScene() command. It takes a scene object as input and replaces the active scene with that one.
+You can change it with the ChangeActiveScene() Method. It takes a scene object as input and replaces the active scene with that one.
 ```csharp
 ChangeActiveScene(Scene new_scene)
 ```
 
+You can add and Remove Objects with the AddObjectToScene/RemoveObjectFromScene Method. They take an Object as an input.
+```csharp
+AddObjectToScene(Object obj);
+RemoveObjectFromScene(Object obj);
+```
 
 #### Camera
-test
+The engine also has a Camera. (It IS NOT connected to the local scene!!!)
+
+You can move it around with the following Methods:
+```csharp
+MoveCameraPosition((int x, int y) position)
+MoveXCameraPosition(int x)
+MoveYCameraPosition(int y)
+```
+#### Outdated Input
+There's still outdated Input with the GetKey() and GetKeyChar() Method
 
 
 ### Objects
