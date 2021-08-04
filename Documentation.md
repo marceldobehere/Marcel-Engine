@@ -256,6 +256,26 @@ Graphics.Sprite_Lib lib = new Graphics.Sprite_Lib(); // sets up a new Sprite Lib
 lib.Sprites.Add("Test", test); // the Sprites List is actually a Dictionary!
 ```
 
+### Input
+Here you can get the Inputs.
+
+You can easily initialise it by making a new instance of it. (Its actually included in the empty project!)
+```csharp
+Input inp = new Input();
+```
+
+You can get the information on if a key is pressed like this:
+```csharp
+inp.KeyPressed(Input.Key.(Enter key here)));
+```
+For example checking if the A key is pressed:
+```csharp
+if (inp.KeyPressed(Input.Key.A))
+{
+   /*Do some stuff*/
+}
+```
+
 
 ### Sound
 Sound manager for the engine.
