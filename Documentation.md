@@ -21,6 +21,7 @@ This is the documentation for Marcel Engine.
     + [Graphics](#graphics)
       - [Sprite](#sprite)
       - [SpriteLib](#spritelib)
+    + [Input](#input)
     + [Sound](#sound)
     + [Networking](#networking)
       - [Server](#server)
