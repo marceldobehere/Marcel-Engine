@@ -4,7 +4,7 @@ You basically explore the dungeon  thats randomly generated.
 
 You can shoot enemies but they can also attack you.
 
-you can hoot with your gun.
+you can shoot with your gun.
 
 The goal is to collect the most amount of coins!
 
